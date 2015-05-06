@@ -1,0 +1,22 @@
+- initial_messages ||= 10
+- messages = WiserChatMessage.where(channel: channel).limit(initial_messages)
+
+#wiser-chat{data: {uri: "#{request.host}:3245/websocket", channel: channel}}
+  #chat-content.row
+    .col-sm-12
+      #chat-messages
+        - messages.each do |message|
+          .message
+            %span.label.label-default= message.created_at.in_time_zone("Asia/Taipei").strftime("%l:%M:%S %P")
+            %b= message.user.name
+            = message.content
+  #chat-info.row
+    .col-sm-7
+      .form-group.string.hidden
+        = text_field_tag :name, current_user.name, placeholder: "Your Name", class: "string optional form-control", data: {id: current_user.id, channel: channel}
+      .form-group.text
+        = text_area_tag :message, "", placeholder: "Write your message here...", class: "text optional input-md form-control"
+      %button#send.btn.btn-primary.hidden Send
+    .col-sm-5
+      %b= "Online Users"
+      #chat-users

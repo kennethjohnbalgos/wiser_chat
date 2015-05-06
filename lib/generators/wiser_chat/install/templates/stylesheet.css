@@ -1,0 +1,42 @@
+#wiser-chat {
+  display: none;
+  width: 500px;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  position: fixed;
+  top: 0;
+  height: 450px;
+  right: 0;
+  margin-top: 51px;
+  z-index: 999;
+  padding: 20px;
+}
+#wiser-chat #chat-info {
+  margin-top: 10px;
+}
+#wiser-chat #chat-content {
+  height: 300px;
+  overflow-x: scroll;
+  border: 1px solid #eee;
+  padding: 10px 0;
+  margin: 0;
+}
+#wiser-chat #chat-content #chat-messages .message {
+  padding: 5px 0 !important;
+  min-height: 25px;
+  border-bottom: 1px solid #eee;
+  line-height: 1.1em;
+}
+#wiser-chat #chat-content #chat-messages .message .label {
+  margin-top: 0px;
+  display: inline-block;
+  float: right;
+  margin-left: 15px;
+}
+#wiser-chat #chat-content #chat-messages .message .system_message {
+  color: #aaa;
+  font-style: italic;
+}
+#wiser-chat .hidden {
+  display: none;
+}
