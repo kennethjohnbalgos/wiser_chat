@@ -1,5 +1,5 @@
 - initial_messages ||= 10
-- messages = WiserChatMessage.where(channel: channel).limit(initial_messages)
+- messages = WiserChatMessage.where(channel: channel).order("id DESC").limit(initial_messages).reverse
 
 #wiser-chat{data: {uri: "#{request.host}:3245/websocket", channel: channel}}
   #chat-content.row
