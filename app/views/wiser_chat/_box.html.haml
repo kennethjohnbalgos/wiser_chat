@@ -9,7 +9,7 @@
           .message
             %span.label.label-default= message.created_at.in_time_zone("Asia/Taipei").strftime("%l:%M:%S %P")
             %b= message.user.name
-            = message.content
+            =raw message.content
   #chat-info.row
     .col-sm-7
       .form-group.string.hidden
