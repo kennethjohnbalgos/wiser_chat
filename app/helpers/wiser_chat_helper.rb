@@ -1,5 +1,5 @@
 module WiserChatHelper
   def wiser_chat(channel)
-    render "layouts/wiser_chat", channel: channel
+    render "wiser_chat/box", channel: channel
   end
 end

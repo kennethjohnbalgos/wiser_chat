@@ -12,13 +12,7 @@ module WiserChat
         timestamp = Time.now.strftime("%Y%m%d%H%M%S")
         template 'events.rb', File.join('config', 'events.rb')
         template 'websocket.rb', File.join('config', 'initializers', 'websocket_rails.rb')
-        template 'moment.js', File.join('app', 'assets', 'javascripts', 'jquery.moment.js')
-        template 'javascript.js', File.join('app', 'assets', 'javascripts', 'wiser_chat.js')
         template 'stylesheet.css', File.join('app', 'assets', 'stylesheets', 'wiser_chat.css')
-        template 'partial.html.haml', File.join('app', 'views', 'layouts', '_wiser_chat.html.haml')
-        template 'model.rb', File.join('app', 'models', 'wiser_chat_message.rb')
-        template 'helper.rb', File.join('app', 'helpers', 'wiser_chat_helper.rb')
-        template 'controller.rb', File.join('app', 'controllers', 'wiser_chat_controller.rb')
         template 'migration.rb', File.join('db', 'migrate', "#{timestamp}_create_wiser_chat_messages.rb")
       end
 
