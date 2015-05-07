@@ -21,7 +21,7 @@ Include the following lines in your `Gemfile`:
 
 	gem 'redis', '3.2.0'
     gem 'websocket-rails', '~> 0.7.0'
-    gem 'wiser_chat', '~> 0.1.3'
+    gem 'wiser_chat', '~> 0.1.4'
 
 Then run:
 

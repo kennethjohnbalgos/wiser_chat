@@ -13,6 +13,8 @@ module WiserChat
         template 'events.rb', File.join('config', 'events.rb')
         template 'websocket.rb', File.join('config', 'initializers', 'websocket_rails.rb')
         template 'stylesheet.css', File.join('app', 'assets', 'stylesheets', 'wiser_chat.css')
+        template 'javascript.js', File.join('app', 'assets', 'javascripts', 'wiser_chat.js')
+        template 'partial.html.haml', File.join('app', 'views', 'layouts', '_wiser_chat.html.haml')
         template 'migration.rb', File.join('db', 'migrate', "#{timestamp}_create_wiser_chat_messages.rb")
       end
 
